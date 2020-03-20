@@ -1,7 +1,9 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../GlobalState.dart';
 import 'LoginPage.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -107,7 +109,6 @@ class _RegisterPageState extends State<RegisterPage> {
                                 email: _emailController.text,
                                 password: _passwordController.text
                             )).user;
-
                             Navigator.pushNamed(context, '/');
                           } catch (e) {
                             print('Ocorreu um erro!!!: $e');
