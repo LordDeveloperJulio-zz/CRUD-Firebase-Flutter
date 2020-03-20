@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String testProviderText = "Hello Provider!";
+  String testProviderText = "Olá Provider!";
 
   @override
   Widget build(BuildContext context) {

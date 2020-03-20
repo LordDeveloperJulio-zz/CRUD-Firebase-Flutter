@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../GlobalState.dart';
 
 class HomeDrawer extends StatelessWidget {
   @override
@@ -31,7 +30,7 @@ class HomeDrawer extends StatelessWidget {
           if (isAuthenticated) ...[
             ListTile(
                 leading: Icon(Icons.note),
-                title: Text('My Posts'),
+                title: Text('Minhas postagens'),
                 onTap: () {
                   Navigator.push(
                     context,
@@ -40,7 +39,7 @@ class HomeDrawer extends StatelessWidget {
                 }),
             ListTile(
               leading: Icon(Icons.exit_to_app),
-              title: Text('Sign Out'),
+              title: Text('Sair'),
               onTap: () async {
                 await FirebaseAuth.instance.signOut();
                 Navigator.pushNamed(context, '/');
@@ -50,7 +49,7 @@ class HomeDrawer extends StatelessWidget {
           if (!isAuthenticated) ...[
             ListTile(
                 leading: Icon(Icons.exit_to_app),
-                title: Text('Login'),
+                title: Text('Conecte-se'),
                 onTap: () {
                   // https://flutter.dev/docs/cookbook/navigation/navigation-basics#2-navigate-to-the-second-route-using-navigatorpush
                   // https://stackoverflow.com/questions/43807184/how-to-close-scaffolds-drawer-after-an-item-tap
@@ -62,7 +61,7 @@ class HomeDrawer extends StatelessWidget {
                 }),
             ListTile(
                 leading: Icon(Icons.account_circle),
-                title: Text('Register'),
+                title: Text('Cadastre-se'),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/sign_up');

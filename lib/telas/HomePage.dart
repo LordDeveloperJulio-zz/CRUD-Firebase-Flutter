@@ -17,13 +17,13 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text("Pagina inicial"),
       ),
       drawer: HomeDrawer(),
       body: Center(
           child: isAuthenticated
-              ? Text('Home Page after login')
-              : Text('Home Page before login')),
+              ? Text('Página inicial após o login')
+              : Text('Página inicial antes do login')),
     );
   }
 }
