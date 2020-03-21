@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'PostsEditPage.dart';
 import 'PostsShowPage.dart';
 
 class MyPostsPage extends StatelessWidget {
@@ -45,7 +46,12 @@ class MyPostsPage extends StatelessWidget {
                         final post = result["value"];
                         switch (type) {
                           case 'edit':
-                            print('clique em editar');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PostsEditPage(post: post),
+                              ),
+                            );
                             break;
                           case 'delete':
                             await Firestore.instance
