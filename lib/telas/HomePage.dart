@@ -46,15 +46,15 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(post.content),
-//                    onTap: () {
-//                      // https://flutter.dev/docs/cookbook/navigation/passing-data#4-navigate-and-pass-data-to-the-detail-screen
-//                      Navigator.push(
-//                        context,
-//                        MaterialPageRoute(
-//                          builder: (context) => PostsShowPage(post: post),
-//                        ),
-//                      );
-//                    },
+                    onTap: () {
+                      // https://flutter.dev/docs/cookbook/navigation/passing-data#4-navigate-and-pass-data-to-the-detail-screen
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PostsShowPage(post: post),
+                        ),
+                      );
+                    },
                   );
                 }).toList(),
               );
